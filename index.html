@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>patrick meehan</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="patrick meehan">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="style_all.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="rowcontainer">
+          <div class="row1">
+          <div id="label">&nbsp;socials</div>
+            <a id="box" class="box1" href="https://instagram.com/pdmeehan">
+              <div id="toptxt"></div>
+              <img src="images/instagram-icon.png">
+              <div id="btmtxt"></div>
+            </a>
+            <a id="box" class="box2" href="https://youtube.com/c/pdmeehan">
+              <div id="toptxt"></div>
+              <img src="images/youtube-icon.png">
+              <div id="btmtxt"></div>
+            </a>
+            <a id="box" class="box3" href="https:// twitter.com/ptrckmhn">
+              <div id="toptxt"></div>
+              <img src="images/twitter-icon.png">
+              <div id="btmtxt"></div>
+            </a>
+          </div>
+          <div class="row2">
+            <div id="label">&nbsp;business</div>
+            <a id="box" class="box1" href="https://linked.in/pdmeehan">
+              <div id="toptxt"></div>
+              <img src="images/linkedin-icon.png">
+              <div id="btmtxt"></div>
+            </a>
+            <a id="box" class="box2" href="resume.html">
+              <div id="toptxt"></div>
+              <img src="images/submit-icon.png">
+              <div id="btmtxt"></div>
+            </a>
+            <a id="box" class="box3" href="https://portfolio.html">
+              <div id="toptxt"></div>
+              <img src="images/portfolio-icon.png">
+              <div id="btmtxt"></div>
+            </a>
+          </div>
+          <div class="row3">
+            <div id="label">&nbsp;about</div>
+            <a id="box" class="box2" href="https://secret.html">
+              <div id="toptxt"></div> 
+              <img src="images/about-icon.png">
+              <div id="btmtxt"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scrollbar1">
+      <div id="bar1">
+        <div class="zmtext">
+         <!bouncing minecraft text goes here>
+        </div>
+      </div>
+    </div>
+    <div class="scrollbar2">
+      <div id="bar2"></div>
+    </div>
+    <button class="button" onclick="linkScroll()">click</button>
+    <script>
+      //link scroll
+      let rows = document.querySelector('.rowcontainer');
+      let currentRow = 1;
+      document.querySelector('.row1').id = 'currentrow';
+
+      function linkScroll() {
+        if (currentRow == 1) {
+          document.querySelector('.row1').id = '';
+          document.querySelector('.row2').id = 'currentrow';
+          rows.style.transform = "translateY(-100%)";
+          currentRow = 2;
+        } else if (currentRow == 2) {
+          document.querySelector('.row2').id = '';
+          document.querySelector('.row3').id = 'currentrow';
+          rows.style.transform = "translateY(-200%)";
+          currentRow = 3;
+        } else if (currentRow == 3) {
+          document.querySelector('.row3').id = '';
+          document.querySelector('.row1').id = 'currentrow';
+          rows.style.transform = "translateY(0%)";
+          currentRow = 1;
+        }
+      }
+    </script>
+  </body>
+</html>
